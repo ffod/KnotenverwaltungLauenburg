@@ -96,8 +96,13 @@
 
 
             <div class="col-md-4">
+            	<br />
                 <h3>Was wir hier von dir brauchen!</h3>
-                <p>Name des Knoten:</p><p> Die Angabe darüber unter welchem Namen dein Knoten z.B. auf den Karten dargestellt wird.</p>
+                <br />
+                <h4>Name des Knoten:</h4><p>Die Angabe darüber unter welchem Namen dein Knoten z.B. auf den Karten dargestellt wird.</p>
+                <h4>E-Mail:</h4><p>Wenn du zu einem späteren Zeitpunkt deine Knoten löschen oder Editieren möchtest benötigen wir die Angabe deiner Email Adresse zur Verifizierung.</p>
+                <h4>Knotenschlüssel:</h4><p>Dies ist der Knotenschlüssel den dein Router dir, bei seiner Erstinitialisierung, genannt hat. Nur mit diesem Schlüssel kann sich dein Router im Freifunknetz anmelden.</p>
+                <h4>Standort des Knoten:</h4><p>Die Geodaten deines Knoten zur Anzeige auf unseren Karten.</p>
             </div>
 				<!-- INSERT STUFF HERE END -->
             
@@ -139,18 +144,4 @@
         </div>
          -->
         <!-- /.row -->
-
         <hr>
-
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; Freifunk Herzogtum Lauebburg 2015</p>
-                </div>
-            </div>
-            <!-- /.row -->
-        </footer>
-
-    </div>
-    <!-- /.container -->

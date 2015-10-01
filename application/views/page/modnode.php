@@ -30,6 +30,7 @@
         <!-- /.row -->
         <!-- Portfolio Item Row -->
         <div class="row">
+        <div style="padding-top:15px;" class="col-md-8">
 		<!-- STUFF GOES HERE START -->
 			<h2>Knoten bearbeiten:</h2>
 			<br />
@@ -54,6 +55,13 @@
 					</tr>
 			</table>
 			</form>
+			</div>
+			<div class="col-md-4">
+			    <br />
+                <h3>Was wir hier von dir brauchen!</h3>
+                <br />
+               <h4>Knotenschlüssel:</h4><p>Dies ist der Knotenschlüssel den dein Router dir, bei seiner Erstinitialisierung, genannt hat. Anschliessend wirst du zu den Daten deines Knoten weiter geleitet.</p>
+			</div>
         <!-- STUFF GOES HERE END -->
         </div>
         <!-- /.row -->
@@ -93,18 +101,4 @@
         </div>
          -->
         <!-- /.row -->
-
         <hr>
-
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; Freifunk Herzogtum Lauebburg 2015</p>
-                </div>
-            </div>
-            <!-- /.row -->
-        </footer>
-
-    </div>
-    <!-- /.container -->
