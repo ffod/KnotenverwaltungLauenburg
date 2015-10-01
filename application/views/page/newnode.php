@@ -31,7 +31,9 @@
         <!-- Portfolio Item Row -->
         <div class="row">
 
-            <div style="padding-top:15px;" class="col-md-12">
+            <div style="padding-top:15px;" class="col-md-8">
+            	<!-- INSERT STUFF HERE START -->
+		        
 		        <h2>Schön, daß Du mitmachen möchtest!</h2>
 				<p>Bitte trag Deine Informationen hier ein damit wir Deinen Freifunk-Knoten aktivieren können.</p>
 				<br />
@@ -89,7 +91,16 @@
 					</tr>
 				</table>
 				</form>
+				
+				   </div>       
+
+
+            <div class="col-md-4">
+                <h3>Was wir hier von dir brauchen!</h3>
+                <p>Name des Knoten:</p><p> Die Angabe darüber unter welchem Namen dein Knoten z.B. auf den Karten dargestellt wird.</p>
             </div>
+				<!-- INSERT STUFF HERE END -->
+            
         </div>
         <!-- /.row -->
 		

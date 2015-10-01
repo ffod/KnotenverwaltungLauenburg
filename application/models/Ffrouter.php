@@ -3,6 +3,7 @@ class Ffrouter extends CI_Model {
 	
 	private $filefolder="/opt/fastd/lauenburg/peers";
 	private $basicDelMailPath="/var/www/vhost_freifunk/codeigniter/application/scripts/basic.maill.del.html";
+	private $basicDelMail2Path="/var/www/vhost_freifunk/codeigniter/application/scripts/basic.mail2.del.html";
 	private $basicAddMailPath="/var/www/vhost_freifunk/codeigniter/application/scripts/basic.maill.add.html";
 	private $logfile="/opt/fastd/lauenburg/create_peers.log";
 	
@@ -19,6 +20,10 @@ class Ffrouter extends CI_Model {
 	
 	public function getBasicDelMailPath(){
 		return $this->basicDelMailPath;
+	}
+	
+	public function getBasicDelMail2Path(){
+		return $this->basicDelMail2Path;
 	}
 	
 	public function getBasicAddMailPath(){
@@ -78,6 +83,20 @@ class Ffrouter extends CI_Model {
     	$delHash=$this->getDelHashByKey($_key);
     	$routername=$this->getNameByKey($_key);
     	$message=file_get_contents($this->getBasicDelMailPath());
+    	$message=str_replace("{KNOTENNAME}",$routername,$message);
+    	$message=str_replace("{BESTÄTIGUNGSCODE}",$delHash,$message);
+    	$this->email->from('knotenverwaltung@freifunk-lauenburg.de', 'Knotenverwaltung');
+    	$this->email->to($toMail);
+    	$this->email->subject('[Freifunk Lauenburg] Knoten löschen');
+    	$this->email->message($message);
+    	$this->email->send();
+    }
+    
+    function sendDeleteMail2($_key){
+    	$toMail=$this->getEmailByKey($_key);
+    	$delHash=$this->getDelHashByKey($_key);
+    	$routername=$this->getNameByKey($_key);
+    	$message=file_get_contents($this->getBasicDelMail2Path());
     	$message=str_replace("{KNOTENNAME}",$routername,$message);
     	$message=str_replace("{BESTÄTIGUNGSCODE}",$delHash,$message);
     	$this->email->from('knotenverwaltung@freifunk-lauenburg.de', 'Knotenverwaltung');

@@ -68,12 +68,14 @@ class Modnode extends CI_Controller {
 		if ($this->form_validation->run() == FALSE){
 			$this->session->set_flashdata('errors',$this->form_validation->error_array());
 			$this->session->set_flashdata('routerdata',json_decode(json_encode($data['routerdata'])));
-			redirect('/Knotenbearbeiten/getloaded');
+			redirect('/Modnode/getloaded');
 		}
 		else{
 			$ffrouter = new Ffrouter();
 			$ffrouter->modify($data['routerdata']);
-			$this->load->view('editsuccess',$data);
+			$this->load->view('templates/header');
+			$this->load->view('page/modnodeeditsuccess',$data);
+			$this->load->view('templates/footer');
 		}
 	}
 	
