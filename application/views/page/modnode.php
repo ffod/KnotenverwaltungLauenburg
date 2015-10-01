@@ -1,3 +1,8 @@
+    <?php 
+	$errors=$this->session->flashdata('error');
+	$data=$this->session->flashdata('data');
+	#var_dump($errors);
+	?>
     <!-- Page Content -->
     <div class="container">
 
@@ -5,8 +10,8 @@
         <div style="padding-top:20px;" class="row">
             <div class="col-lg-12">
 			    <ul class="nav nav-tabs">
-			        <li class="active"><a href=""<?php echo site_url('Start');?>">Start</a></li>
-			        <li class="dropdown enabled">
+			        <li class="enabled"><a href="<?php echo site_url('Start');?>">Start</a></li>
+			        <li class="active dropdown">
 			            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
 			               Knotenverwaltung 
 			               <b class="caret"></b>
@@ -25,17 +30,31 @@
         <!-- /.row -->
         <!-- Portfolio Item Row -->
         <div class="row">
-
-            <div style="padding-top:15px;" class="col-md-8">
-            	<div class="responsive-video">
-            		<iframe src="//player.vimeo.com/video/64814620?title=0&badge=0&byline=0&portrait=0&title=0" width="750" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-            	</div>
-            </div>
-
-            <div class="col-md-4">
-                <h3>Was ist Freifunk?</h3>
-                <p>Freifunk ist ein Projekt, das versucht ein weites Datennetz auf Basis von WLAN-Routern aufzubauen. Dieses Netz soll eine freie Kommunikation innerhalb der Region und, mithilfe von Peerings zu anderen Freifunk Gemeinden, auch überregional ermöglichen. Um dies zu Erreichen, werden Freifunknoten (das sind die Router mit den Antennen), von freiwilligen an vielen Orten in der Stadt betrieben. Jedes WLAN-fähige Gerät, also beispielsweise Handy oder Notebook, kann sich in der Nähe eines solchen Knotens mit dem Netz verbinden und darüber mit anderen Teilnehmern kommunizieren. Auch ein Zugang ins Internet steht meistens zur Verfügung.</p>
-            </div>
+		<!-- STUFF GOES HERE START -->
+			<h2>Knoten bearbeiten:</h2>
+			<br />
+			<form action="<?php echo site_url("modnode/get")?>" method="post">
+			<table style="width:100%">
+					<tr>
+						<td style="padding: 5px;">Knotenschlüssel:</td>
+						<td style="padding: 5px;"><input class="form-control" type="text" size='35' name="routerkey" value="" /></td>
+					</tr>
+					<?php 
+						if(isset($errors['routerkey'])){
+							echo "<tr><td align=\"right\" style=\"padding: 5px;\" colspan=\"2\">";
+							echo "<span class=\"label alert-warning\" role=\"alert\">".$errors['routerkey']."</span>";
+							echo "</tr></td>";
+						}
+					?>
+					<tr>
+						<td colspan="2">&nbsp;</td>
+					</tr>
+					<tr>
+						<td colspan="2"><input type="submit" name="submit" class="btn btn-default" value="Bearbeiten" /></td>
+					</tr>
+			</table>
+			</form>
+        <!-- STUFF GOES HERE END -->
         </div>
         <!-- /.row -->
 		

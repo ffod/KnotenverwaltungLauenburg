@@ -16,3 +16,13 @@
 	<title>Freifunk Herzogtum Lauenburg</title>
 </head>
 <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+            	<!-- <img class="image-responsive" style="width:10%;height:10%;" src="<?php echo base_url('/assets/images/logo.png');?>" /> -->
+            	<h1 style="display:inline-block;color:#FFFFFF;">Freifunk Herzogtum Lauenburg</h1>
+            </div>
+        </div>
+    </nav>

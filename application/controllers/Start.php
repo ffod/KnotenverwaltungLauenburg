@@ -8,3 +8,4 @@ class Start extends CI_Controller {
 		$this->load->view('templates/footer');
 	}
 }
+?>

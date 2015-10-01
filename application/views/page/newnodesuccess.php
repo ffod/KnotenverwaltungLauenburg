@@ -1,3 +1,8 @@
+    <?php 
+	$errors=$this->session->flashdata('error');
+	$data=$this->session->flashdata('data');
+	#var_dump($errors);
+	?>
     <!-- Page Content -->
     <div class="container">
 
@@ -5,8 +10,8 @@
         <div style="padding-top:20px;" class="row">
             <div class="col-lg-12">
 			    <ul class="nav nav-tabs">
-			        <li class="active"><a href=""<?php echo site_url('Start');?>">Start</a></li>
-			        <li class="dropdown enabled">
+			        <li class="enabled"><a href="<?php echo site_url('Start');?>">Start</a></li>
+			        <li class="active dropdown">
 			            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
 			               Knotenverwaltung 
 			               <b class="caret"></b>
@@ -26,16 +31,11 @@
         <!-- Portfolio Item Row -->
         <div class="row">
 
-            <div style="padding-top:15px;" class="col-md-8">
-            	<div class="responsive-video">
-            		<iframe src="//player.vimeo.com/video/64814620?title=0&badge=0&byline=0&portrait=0&title=0" width="750" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-            	</div>
-            </div>
-
-            <div class="col-md-4">
-                <h3>Was ist Freifunk?</h3>
-                <p>Freifunk ist ein Projekt, das versucht ein weites Datennetz auf Basis von WLAN-Routern aufzubauen. Dieses Netz soll eine freie Kommunikation innerhalb der Region und, mithilfe von Peerings zu anderen Freifunk Gemeinden, auch überregional ermöglichen. Um dies zu Erreichen, werden Freifunknoten (das sind die Router mit den Antennen), von freiwilligen an vielen Orten in der Stadt betrieben. Jedes WLAN-fähige Gerät, also beispielsweise Handy oder Notebook, kann sich in der Nähe eines solchen Knotens mit dem Netz verbinden und darüber mit anderen Teilnehmern kommunizieren. Auch ein Zugang ins Internet steht meistens zur Verfügung.</p>
-            </div>
+            <div style="padding-top:15px;" class="col-md-12">
+		        <div class="alert alert-success" role="alert"><h3>Fertig!</h3>
+					<p>Dein neuer Freifunk Knoten wurde registriert und sollte in wenigen Minuten funktionieren.</p>
+				</div>           
+			</div>
         </div>
         <!-- /.row -->
 		
