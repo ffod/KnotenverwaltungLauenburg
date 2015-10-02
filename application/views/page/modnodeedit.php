@@ -11,7 +11,7 @@
             <div class="col-lg-12">
 			    <ul class="nav nav-tabs">
 			        <li class="enabled"><a href="<?php echo site_url('Start');?>">Start</a></li>
-			        <li class="active dropdown">
+			        <li class="enabled dropdown">
 			            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
 			               Knotenverwaltung 
 			               <b class="caret"></b>
