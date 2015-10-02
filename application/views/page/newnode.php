@@ -35,7 +35,6 @@
             	<!-- INSERT STUFF HERE START -->
 		        
 		        <h2>Schön, daß Du mitmachen möchtest!</h2>
-				<p>Bitte trag Deine Informationen hier ein damit wir Deinen Freifunk-Knoten aktivieren können.</p>
 				<br />
 				<form action="<?php echo site_url("Newnode/addcheck")?>" method="post">
 				<table style="width:100%">

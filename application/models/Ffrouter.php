@@ -125,6 +125,18 @@ class Ffrouter extends CI_Model {
     	$this->db->replace('knoten_lauenburg', $data);
     }
     
+    function delHashExists($_delhash){
+    	$this->db->where('delhash',$_delhash);
+    	$query=$this->db->get('knoten_lauenburg');
+    	if ($query->num_rows() > 0){
+    		return TRUE;
+    	}
+    	else{
+    		$this->form_validation->set_message('delhash_exists', 'Ungültiger Bestätigungscode.');
+    		return FALSE;
+    	}
+    }
+    
     function delByHash($_hash){
     	$routername=$this->getNameByDelHash($_hash);
     	$this->db->delete('knoten_lauenburg', array('delhash' => $_hash));

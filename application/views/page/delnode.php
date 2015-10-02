@@ -1,5 +1,5 @@
     <?php 
-	$errors=$this->session->flashdata('error');
+	$errors=$this->session->flashdata('errors');
 	$data=$this->session->flashdata('data');
 	#var_dump($errors);
 	?>
@@ -31,12 +31,11 @@
         <!-- Portfolio Item Row -->
         <div class="row">
 		<!-- STUFF GOES HERE START -->
+		<div style="padding-top:15px;" class="col-md-8">
 			<h2>Knoten löschen:</h2>
-			<p>Mit Hilfe dieser Seite kann ein bereits registrierter Freifunk Knoten aus der Datenbank gelöscht werden. Danach wird der VPN-Key auf dem Gateway gelöscht.</p>
-			<p>Bitte folge den Anweisungen in der Mail die wir dir zusenden.</p>
+
 			<br />
-			<p>Wenn Du den VPN-Schlüssel Deines Knotens nicht kennst, kannst Du ihn im Config-Mode auslesen. Mehr dazu findest Du <a href="http://wiki.freifunk.net/Freifunk_Hamburg/Firmware#Weg_1:_Config_Mode">hier</a>.</p> 
-			<p>Wenn Du Dich auf Deinem Knoten per SSH einloggen kannst, liest Du den Key per "/etc/init.d/fastd show_key mesh_vpn" aus.</p>
+
 			<br />
 			<form action="<?php echo site_url("Delnode/checkToSendMail")?>" method="post">
 			<table style="width:100%">
@@ -59,6 +58,16 @@
 					</tr>
 			</table>
 			</form>	
+		</div>
+		<div style="padding-top:15px;" class="col-md-4">
+			<br />
+			<h2>Info:</h2>
+			<p>Mit Hilfe dieser Seite kann ein bereits registrierter Freifunk Knoten aus unserer Datenbank gelöscht werden.</p>
+			<p>Bitte folge nach der Eingabe des Knotenschlüssels den Anweisungen in der Mail die wir dir zusenden.</p>
+			<p>Wenn Du den VPN-Schlüssel Deines Knotens nicht kennst, kannst Du ihn im Config-Mode auslesen. Mehr dazu findest Du <a target="_blank" href="http://wiki.freifunk.net/Freifunk_Hamburg/Firmware#Weg_1:_Config_Mode">hier</a>.</p> 
+			<p>Wenn Du Dich auf Deinem Knoten per SSH einloggen kannst, kannst du dir den Key mit dem folgenden Befehl anzeigen lassen:</p>
+			<p>"/etc/init.d/fastd show_key mesh_vpn"</p>
+		</div>
         <!-- STUFF GOES HERE END -->
         </div>
         <!-- /.row -->

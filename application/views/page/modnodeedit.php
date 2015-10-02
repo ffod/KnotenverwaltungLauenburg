@@ -1,5 +1,5 @@
     <?php 
-	$errors=$this->session->flashdata('error');
+	$errors=$this->session->flashdata('errors');
 	$data=$this->session->flashdata('data');
 	#var_dump($errors);
 	?>

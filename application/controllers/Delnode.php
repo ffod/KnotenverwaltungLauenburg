@@ -14,7 +14,7 @@ class Delnode extends CI_Controller {
 		
 		if ($this->form_validation->run() == FALSE){
 			$this->session->set_flashdata('errors',$this->form_validation->error_array());
-			redirect('/knotenloeschen/');
+			redirect('/Delnode/');
 		}
 		else{
 			(new Ffrouter)->setDelHashForRouter($this->input->post('routerkey'));
@@ -26,23 +26,18 @@ class Delnode extends CI_Controller {
 	}
 	
 	public function delete(){
-		$this->form_validation->set_rules('delhash', 'Bestätigungscode', 'trim|required|min_length[32]|max_length[32]|callback_delhash_exists|regex_match[/[a-f0-9]{32}/]');
+		$delhash=trim($this->uri->segment(3));
 		
-		if ($this->form_validation->run() == FALSE){
-			$this->session->set_flashdata('errors',$this->form_validation->error_array());
-			redirect('/knotenloeschen/getdelhash');
+		if(preg_match('/^[a-f0-9]{32}$/', $delhash) && (new Ffrouter)->delHashExists($delhash)){
+			(new Ffrouter)->delByHash($delhash);
+			
+			$this->load->view('templates/header');
+			$this->load->view('page/deletesuccess');
+			$this->load->view('templates/footer');
 		}
 		else{
-			(new Ffrouter)->delByHash($this->input->post('delhash'));
-			$this->load->view('deletesuccess');
+			redirect('/Delnode');
 		}
-	}
-	
-	public function getdelhash(){
-		$data=array(
-				'errors'		=> $this->session->flashdata('errors'),
-		);
-		$this->load->view('getdelhash',$data);
 	}
 	
 	//Callback functions
@@ -54,18 +49,6 @@ class Delnode extends CI_Controller {
 		}
 		else{
 			$this->form_validation->set_message('router_exists', 'Der angegebene Knoten ist uns nicht bekannt.');
-			return FALSE;
-		}
-	}
-	
-	function delhash_exists($_delhash){
-		$this->db->where('delhash',$_delhash);
-		$query=$this->db->get('knoten_lauenburg');
-		if ($query->num_rows() > 0){
-			return TRUE;
-		}
-		else{
-			$this->form_validation->set_message('delhash_exists', 'Ungültiger Bestätigungscode.');
 			return FALSE;
 		}
 	}

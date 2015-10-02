@@ -9,15 +9,13 @@ class Modnode extends CI_Controller {
 	}
 	
 	public function get(){
-		$this->form_validation->set_rules('routerkey', 'Router Schlüssel', 'trim|required|callback_routername_check|min_length[64]|max_length[64]|regex_match[/[0-9a-f]{64}/]');
-		#trim|required|is_unique[knoten_lauenburg.key]|min_length[64]|max_length[64]|regex_match[/[0-9a-f]{64}/]
+		$this->form_validation->set_rules('routerkey', 'Router Schlüssel', 'trim|required|min_length[64]|max_length[64]|regex_match[/[0-9a-f]{64}/]|callback_router_exists');
 		
 		if ($this->form_validation->run() == FALSE){
 			$this->session->set_flashdata('error',$this->form_validation->error_array());
-			redirect('/modnode/');
+			redirect('/Modnode/');
 		}
 		else{
-
 			$routerdata=(new Ffrouter())->getRouterByKey($this->input->post('routerkey'));
 			$this->session->set_flashdata('routerdata',$routerdata);
 			redirect('/modnode/getloaded');
@@ -89,4 +87,16 @@ class Modnode extends CI_Controller {
 			return TRUE;
 		}
 	}
+	
+	function router_exists($_key){
+		$this->db->where('key',$_key);
+		$query=$this->db->get('knoten_lauenburg');
+		if ($query->num_rows() > 0){
+			return TRUE;
+		}
+		else{
+			$this->form_validation->set_message('router_exists', 'Der angegebene Knoten ist uns nicht bekannt.');
+			return FALSE;
+		}
+	}	
 }
