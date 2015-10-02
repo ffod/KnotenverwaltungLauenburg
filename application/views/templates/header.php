@@ -33,7 +33,7 @@
         <div style="padding-top:20px;" class="row">
             <div class="col-lg-12">
 			    <ul class="nav nav-tabs">
-			        <li class="enabled"><a href=""<?php echo site_url('Start');?>">Start</a></li>
+			        <li class="enabled"><a href="<?php echo site_url('Start');?>">Start</a></li>
 			        <li class="dropdown enabled">
 			            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
 			               Knotenverwaltung 
@@ -46,6 +46,26 @@
 			               <li><a href="<?php echo site_url('Shownode');?>">Meine Knoten Anzeigen</a></li>
 			            </ul>
          			</li>
+         			<li class="dropdown enabled">
+			            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+			               Mitmachen
+			               <b class="caret"></b>
+			            </a>
+			            <ul class="dropdown-menu">
+			               <li><a target="_blank" href="http://firmware.lauenburg.ffod.org/">Software</a></li>
+			            </ul>
+         			</li>
+         			<!-- 
+         			<li class="dropdown enabled">
+			            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+			               Links
+			               <b class="caret"></b>
+			            </a>
+			            <ul class="dropdown-menu">
+			               <li><a href="#">Test</a></li>
+			            </ul>
+         			</li>
+         			 -->
 			    </ul>
             </div>
         </div>
