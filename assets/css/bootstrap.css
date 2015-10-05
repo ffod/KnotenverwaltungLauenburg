@@ -4183,12 +4183,18 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   font-size: 18px;
   line-height: 20px;
 }
+
 .navbar-brand:hover,
 .navbar-brand:focus {
   text-decoration: none;
 }
 .navbar-brand > img {
   display: block;
+  max-height: 40px;
+  max-width: 30%; 
+  overflow: visible;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 @media (min-width: 768px) {
   .navbar > .container .navbar-brand,

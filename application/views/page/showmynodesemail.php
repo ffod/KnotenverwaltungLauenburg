@@ -1,5 +1,5 @@
     <?php 
-	$errors=$this->session->flashdata('error');
+	$errors=$this->session->flashdata('errors');
 	$data=$this->session->flashdata('data');
 	#var_dump($errors);
 	?>
@@ -9,7 +9,7 @@
         <!-- Portfolio Item Row -->
         <div class="row">
 
-            <div style="padding-top:15px;" class="col-md-8">
+            <div class="col-md-8">
             	<h2>Meine Knoten Anzeigen:</h2>
 				<br />
 				<form action="<?php echo site_url("Shownode/showlist")?>" method="post">
@@ -18,6 +18,13 @@
 							<td style="padding: 5px;">E-Mail:</td>
 							<td style="padding: 5px;"><input class="form-control" type="text" size='35' name="email" value="" /></td>
 						</tr>
+						<?php 
+							if(isset($errors['email'])){
+								echo "<tr><td align=\"right\" style=\"padding: 5px;\" colspan=\"2\">";
+								echo "<span class=\"label alert-warning\" role=\"alert\">".$errors['email']."</span>";
+								echo "</tr></td>";
+							}
+						?>
 						<tr>
 							<td colspan="2">&nbsp;</td>
 						</tr>
@@ -27,7 +34,7 @@
 				</table>
 				</form>
 			</div>
-			<div style="padding-top:15px;" class="col-md-4">
+			<div class="col-md-4">
 				<h3>Deine Knoten!</h3>
 				<p>Hier kannst du dir alle auf deine Email Adresse registrierten Knoten anzeigen lassen</p>
 			</div>

@@ -9,7 +9,7 @@
         <!-- Portfolio Item Row -->
         <div class="row">
 
-            <div style="padding-top:15px;" class="col-md-8">
+            <div class="col-md-8">
             	<!-- INSERT STUFF HERE START -->
 		        
 		        <h2>Schön, daß Du mitmachen möchtest!</h2>

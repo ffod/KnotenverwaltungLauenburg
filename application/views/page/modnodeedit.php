@@ -7,7 +7,7 @@
     <div class="container">
 
         <!-- Portfolio Item Heading -->
-        <div style="padding-top:20px;" class="row">
+        <div class="row">
             <div class="col-lg-12">
 			    <ul class="nav nav-tabs">
 			        <li class="enabled"><a href="<?php echo site_url('Start');?>">Start</a></li>

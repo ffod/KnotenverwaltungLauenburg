@@ -9,7 +9,7 @@
         <!-- Portfolio Item Row -->
         <div class="row">
 		<!-- STUFF GOES HERE START -->
-		<div style="padding-top:15px;" class="col-md-8">
+		<div class="col-md-8">
 			<h2>Knoten löschen:</h2>
 
 			<br />
@@ -37,7 +37,7 @@
 			</table>
 			</form>	
 		</div>
-		<div style="padding-top:15px;" class="col-md-4">
+		<div class="col-md-4">
 			<br />
 			<h2>Info:</h2>
 			<p>Mit Hilfe dieser Seite kann ein bereits registrierter Freifunk Knoten aus unserer Datenbank gelöscht werden.</p>

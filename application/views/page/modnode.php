@@ -8,7 +8,7 @@
         <!-- /.row -->
         <!-- Portfolio Item Row -->
         <div class="row">
-        <div style="padding-top:15px;" class="col-md-8">
+        <div class="col-md-8">
 		<!-- STUFF GOES HERE START -->
 			<h2>Knoten bearbeiten:</h2>
 			<br />

@@ -1,5 +1,5 @@
     <?php 
-	$errors=$this->session->flashdata('error');
+	$errors=$this->session->flashdata('errors');
 	$data=$this->session->flashdata('data');
 	#var_dump($errors);
 	?>
@@ -9,7 +9,7 @@
         <!-- Portfolio Item Row -->
         <div class="row">
 		<!-- INSERT STUFF HERE START -->
-            <div style="padding-top:15px;" class="col-md-8">
+            <div class="col-md-8">
             	<h2>Deine Knoten:</h2>
             	<br />
             	<?php
@@ -40,7 +40,7 @@
 					 }
 					?>
 			</div>
-			<div style="padding-top:15px;" class="col-md-8">
+			<div class="col-md-8">
 				&nbsp;
 			</div>
 		<!-- INSERT STUFF HERE END -->

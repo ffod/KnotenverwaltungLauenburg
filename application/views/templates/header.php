@@ -23,20 +23,20 @@
     <nav class="navbar navbar-default" role="navigation">
         <div class="container container-fluid">   
 			<div class="navbar-header">
+			
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
 					<span class="sr-only">Toggle navigation</span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
             	</button>
-            <!--  <a class="navbar-brand" href="#">&nbsp;</a> -->
+            	<a class="navbar-brand" href="<?php echo site_url('Start');?>"><img style="max-width:150px; margin-top: -10px;" src="<?php echo base_url("assets/images/fflogo.png");?>" /></a>
           </div>
             <div id="navbar" class="navbar-collapse collapse">
             	 <ul class="nav navbar-nav">
 			        <li class="enabled"><a href="<?php echo site_url('Start');?>">Start</a></li>
 			        <li class="dropdown">
 			            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Knotenverwaltung <span class="caret"></span></a>
-			            </a>
 			            <ul class="dropdown-menu">
 			               <li><a href="<?php echo site_url('Newnode');?>">Neuer Knoten</a></li>
 			               <li><a href="<?php echo site_url('Modnode');?>">Knoten bearbeiten</a></li>

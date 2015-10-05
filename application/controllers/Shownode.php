@@ -12,12 +12,12 @@ class Shownode extends CI_Controller {
 		$this->form_validation->set_rules('email', 'E-Mail', 'trim|required|max_length[50]|valid_email');
 		
 		if ($this->form_validation->run() == FALSE){
-			$this->session->set_flashdata('error',$this->form_validation->error_array());
-			echo "falsche mail";
+			$this->session->set_flashdata('errors',$this->form_validation->error_array());
+			redirect('/Shownode/');
 		}
 		else{
 			$data=array(
-					'knoten' => ((new Ffrouter)->getNodesByEmail("kai.zemke@zemvol.de")),
+					'knoten' => ((new Ffrouter)->getNodesByEmail($this->input->post('email'))),
 			);
 			
 			$this->load->view('templates/header');
