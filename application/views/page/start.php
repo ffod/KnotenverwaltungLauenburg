@@ -4,7 +4,7 @@
         <!-- Portfolio Item Row -->
         <div class="row">
 
-            <div style="padding-top:15px;" class="col-md-8">
+            <div class="col-md-8">
             	<div class="responsive-video">
             		<iframe src="//player.vimeo.com/video/64814620?title=0&badge=0&byline=0&portrait=0&title=0" width="750" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             	</div>
