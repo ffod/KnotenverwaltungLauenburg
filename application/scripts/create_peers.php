@@ -2,9 +2,9 @@
 <?php
 	if(php_sapi_name()=='cli'){
 		$host="localhost";
-		$username="ff_lauenburg";
-		$password="##warcraft81##";
-		$database="ff_lauenburg";
+		$username="";
+		$password="";
+		$database="";
 		
 		$filefolder="/opt/fastd/lauenburg/peers";
 		$logfile="/opt/fastd/lauenburg/create_peers.log";
