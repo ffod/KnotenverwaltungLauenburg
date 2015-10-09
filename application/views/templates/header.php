@@ -10,9 +10,15 @@
 	<!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="<?php echo base_url('/assets/css/bootstrap.css');?>" />
 	
-	<!-- Custom CSS -->
+	<!-- Template CSS -->
 	<link rel="stylesheet" href="<?php echo base_url('/assets/css/portfolio-item.css');?>">
+	
+	<!-- Awesome Checkboxes CSS -->
+	<link rel="stylesheet" href="<?php echo base_url('/assets/css/awesome-bootstrap-checkbox.css');?>">
 
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	
 	<!-- My Own CSS -->
 	<link rel="stylesheet" href="<?php echo base_url('/assets/css/own.css');?>">
 	

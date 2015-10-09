@@ -18,38 +18,38 @@
         <!-- /.row -->
 		
         <!-- Related Projects Row -->
-        <!-- 
+         
         <div class="row">
 
             <div class="col-lg-12">
                 <h3 class="page-header">Mehr zum Thema Freifunk im Herzogtum Lauenburg</h3>
             </div>
             
-            <div class="col-sm-3 col-xs-6">
+            <!-- <a href="<?php echo site_url("blog");?>">
+	            <div align="center" style="background-color:white;border: 4px solid #f8f8f8" class="col-sm-3 col-xs-6">
+	                    <img class="img-responsive" src="<?php echo base_url("/assets/images/ff2.png");?>" alt="">
+	            </div>
+            </a> -->
+            
+            <!-- <a href="<?php echo site_url("blog");?>">
+	            <div align="center" style="background-color:white;border: 4px solid #f8f8f8" class="col-sm-3 col-xs-6">
+	                    <img style="max-height:144px;" class="img-responsive" src="<?php echo base_url("/assets/images/starter-kit-300x194.png");?>" alt="">
+	            </div>
+            </a> -->
+		
+            <!-- <div class="col-sm-3 col-xs-6">
                 <a href="#">
                     <img class="img-responsive portfolio-item" src="http://placehold.it/500x300" alt="">
                 </a>
-            </div>
+            </div> -->
 
             <div class="col-sm-3 col-xs-6">
                 <a href="#">
-                    <img class="img-responsive portfolio-item" src="http://placehold.it/500x300" alt="">
-                </a>
-            </div>
-
-            <div class="col-sm-3 col-xs-6">
-                <a href="#">
-                    <img class="img-responsive portfolio-item" src="http://placehold.it/500x300" alt="">
-                </a>
-            </div>
-
-            <div class="col-sm-3 col-xs-6">
-                <a href="#">
-                    <img class="img-responsive portfolio-item" src="http://placehold.it/500x300" alt="">
+                    <!-- <img class="img-responsive portfolio-item" src="http://placehold.it/500x300" alt=""> -->
                 </a>
             </div>
 
         </div>
-         -->
+        
         <!-- /.row -->
         <hr>
